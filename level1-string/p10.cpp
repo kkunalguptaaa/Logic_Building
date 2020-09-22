@@ -9,17 +9,19 @@ using namespace std;
 int main()
 {
     string str;
-    int index;
+    int index,lastWordIndex;
     getline(cin, str);
-    cout << str+"-"+str[0];
+    cout << str+"-";
     for(index=0;index<str.length();index++){
         index=str.find(" ",index);
         if (index!= string::npos) {
-             cout <<"."<< str[index+1];
+             cout <<str[index-1] << ".";
+             lastWordIndex=index;
         }
         else{
             break;
         }
     }
+    cout << str.substr(lastWordIndex+1,str.length());
     return 0;
 }

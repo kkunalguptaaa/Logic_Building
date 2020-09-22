@@ -1,19 +1,18 @@
-//3.	WAP to accept a String and Count number of Capital letters present in it.(eq- ComPuter - 2)
+//5.	WAP to accept a string and count number of Words Present in it.(eq- Amar  Singh-- 2)
 #include <iostream>
 #include <string>
 using namespace std;
-
 int main()
 {
     string str;
     int i=0,count=0;
     getline(cin, str);
     while(i < str.length()){
-        if('A'<=str[i]&&str[i]<='Z'){
+        if(str[i]==' '){
             count++;
         }
         i++;
     }
-    cout << count << endl;
+    cout << count+1 << endl;
     return 0;
 }

@@ -8,18 +8,16 @@ using namespace std;
 
 int main()
 {
-    string str;
+    string str,s1;
     int index;
     getline(cin, str);
-    cout << str+"-"+str[0];
-    for(index=0;index<str.length();index++){
-        index=str.find(" ",index);
-        if (index!= string::npos) {
-             cout <<"."<< str[index+1];
-        }
-        else{
+    for(int i=0;i<str.length();i++){
+        if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U'){
+            s1=str.substr(i);
+            s1=s1+str.substr(0,i)+"ay";
             break;
         }
     }
+    cout << s1;
     return 0;
 }
